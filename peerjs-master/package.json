@@ -1,13 +1,6 @@
 {
-  "devDependencies": {
-    "expect.js": "*",
-    "mocha": "*"
-  },
   "dependencies": {
-    "eventemitter3": "^0.1.5",
     "express": "^4.13.4",
-    "js-binarypack": "0.0.9",
-    "peerjs": "^0.3.14",
-    "reliable": "git+https://github.com/michelle/reliable.git"
+    "peerjs": "^0.3.14"
   }
 }
