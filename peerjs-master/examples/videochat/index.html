@@ -1,16 +1,24 @@
 <html>
 <head>
   <title>PeerJS - Video chat example</title>
-  <link rel="stylesheet" href="style.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-  <script type="text/javascript" src="../../dist/peer.js"></script>
+  <link rel="stylesheet" href="/style.css">
+  <script type="text/javascript" src="/peer.js"></script>
   <script>
-
     // Compatibility shim
     navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 
     // PeerJS object
-    var peer = new Peer({ key: 'lwjd5qra8257b9', debug: 3});
+    //var peer = new Peer({ key: 'lwjd5qra8257b9', debug: 3});
+    var peer = new Peer({ host: '52.26.139.37', port: 80, debug: 3, config: {
+      "iceServers": [
+        {"url": "stun:stun.l.google.com:19302"},
+        {"url": "stun:stun3.l.google.com:19302"},
+        {"url": "stun:stun.rixtelecom.se"},
+        {"url": "stun:stun.schlund.de"},
+        {"url": "stun:stunserver.org"}
+      ]}
+    });
 
     peer.on('open', function(){
       $('#my-id').text(peer.id);
