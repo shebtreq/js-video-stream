@@ -2,15 +2,15 @@ var express = require('express');
 var app = express();
 
 app.get('/', function (req, res) {
-    res.sendFile(__dirname + '/examples/videochat/index.html');
+    res.sendFile(__dirname + '/videochat/index.html');
 });
 
 app.get('/style.css', function (req, res) {
-    res.sendFile(__dirname + '/examples/videochat/style.css');
+    res.sendFile(__dirname + '/videochat/style.css');
 });
 
 app.get('/peer.js', function (req, res) {
-    res.sendFile(__dirname + '/dist/peer.js');
+    res.sendFile(__dirname + '/node_modules/peerjs/dist/peer.js');
 });
 
 app.listen(3000);
