@@ -1,0 +1,6 @@
+echo "Lanuching client on ip 2000"
+node client.js & > client-debug.log
+echo "Lanuching cam on ip 3000"
+node cam.js & > cam-debug.log
+
+

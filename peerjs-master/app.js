@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 
 app.get('/', function (req, res) {
-    res.sendFile(__dirname + '/videochat/index-client.html');
+    res.sendFile(__dirname + '/videochat/index.html');
 });
 
 app.get('/style.css', function (req, res) {
@@ -13,4 +13,4 @@ app.get('/peer.js', function (req, res) {
     res.sendFile(__dirname + '/node_modules/peerjs/dist/peer.js');
 });
 
-app.listen(2000);
+app.listen(4000);
