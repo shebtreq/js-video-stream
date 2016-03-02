@@ -13,4 +13,4 @@ app.get('/peer.js', function (req, res) {
     res.sendFile(__dirname + '/node_modules/peerjs/dist/peer.js');
 });
 
-app.listen(4000);
+app.listen(3002);
