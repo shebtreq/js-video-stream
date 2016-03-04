@@ -4,9 +4,9 @@ import serial
 ser = serial.Serial()
 ser.baudrate = 9600
 ser.port = '/dev/ttyACM0'
-print ser
+print "Serial Class:" ser
 ser.open()
-print ser.is_open
+print "Is Serial Port open? " ser.is_open
 
 
 #Setup server
