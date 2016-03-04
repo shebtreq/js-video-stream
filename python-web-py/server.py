@@ -1,5 +1,15 @@
 import web
+import serial
 
+ser = serial.Serial()
+ser.baudrate = 9600
+ser.port = '/dev/ttyACM0'
+print ser
+ser.open()
+print ser.is_open
+
+
+#Setup server
 urls = (
     '/(.*)left', 'left',
     '/(.*)right', 'right',
@@ -12,10 +22,12 @@ class server_default:
 
 class left:
     def GET(self, name):
+        ser.write('l');
         return 'servo is going left'
 
 class right:
     def GET(self, name):
+        ser.write('r');
         return 'servo is going right'
 
 if __name__ == "__main__":
